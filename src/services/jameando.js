@@ -36,6 +36,12 @@ const getTracks = async (tags = [], speed, excludedIds = []) => {
 
   const data = await response.json()
 
+  console.log('Estado HTTP:', response.status)
+  console.log('Estado Jamendo:', data.headers?.status)
+  console.log('Mensaje Jamendo:', data.headers?.error_message)
+  console.log('Resultados recibidos:', data.results?.length)
+  console.log('Primera canción:', data.results?.[0])
+
   if (data.headers?.status !== 'success') {
     throw new Error(
       data.headers?.error_message || 'Respuesta inválida de Jamendo'
