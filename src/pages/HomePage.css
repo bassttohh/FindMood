@@ -1,0 +1,12 @@
+.home-page {
+  min-height: calc(100vh - 80px);
+  padding: 44px 56px 92px;
+  color: #101827;
+  background: #f5f7fb;
+}
+
+@media (max-width: 760px) {
+  .home-page {
+    padding: 32px 24px 92px;
+  }
+}

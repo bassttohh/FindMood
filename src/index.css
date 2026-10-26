@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600&family=Sora:wght@400;500;600;700;800&display=swap');
+
+/* index.css */
+:root {
+  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-heading: 'Sora', sans-serif;
+
+  /* Colores */
+  --color-background: #F5F7FB;
+  --color-surface: #FFFFFF;
+  --color-primary: #7C8EFF;
+  --color-blue-mist: #E9F0FF;
+  --color-sky: #D6E4FF;
+
+  /* Texto */
+  --color-text: #0F172A;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748B;
+
+  /*mood-colors*/
+  --color-happy: #E5E0FF;
+  --color-sad: #DDEAFF;
+  --color-chill: #D9F0E4;
+
+  /* Detalles */
+  --color-border: #E8ECF5;
+  --radius-card: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

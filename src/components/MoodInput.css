@@ -1,0 +1,128 @@
+.mood-input__content {
+  position: relative;
+  z-index: 1;
+  max-width: 840px;
+}
+
+.mood-input__saludo {
+  margin-bottom: 24px;
+}
+
+
+.mood-input__saludo h1 {
+  margin: 0;
+  color: #27344d;
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  font-weight: bold;
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+
+.mood-input__saludo p {
+  margin: 12px 0 0;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.mood-input__description-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 104px;
+  padding: 18px 84px 24px 58px;
+  border: 1px solid #d8dfeb;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 14px 32px rgb(15 23 42 / 9%);
+}
+
+.mood-input__description-form:focus-within {
+  border-color: #0f172a;
+  box-shadow: 0 0 0 4px rgb(15 23 42 / 10%);
+}
+
+.mood-input__pencil {
+  position: absolute;
+  top: 28px;
+  left: 21px;
+  color: #64748b;
+}
+
+.mood-input__description-form textarea {
+  width: 100%;
+  min-height: 48px;
+  max-height: 96px;
+  overflow-y: auto;
+  resize: none;
+  border: 0;
+  outline: 0;
+  color: #0f172a;
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.mood-input__description-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+.mood-input__counter {
+  position: absolute;
+  right: 106px;
+  bottom: 15px;
+  color: #94a3b8;
+  font-size: 0.78rem;
+}
+
+.mood-input__submit {
+  position: absolute;
+  right: 17px;
+  display: grid;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #0f172a;
+  box-shadow: 0 9px 18px rgb(15 23 42 / 22%);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.mood-input__submit:hover {
+  box-shadow: 0 12px 22px rgb(15 23 42 / 28%);
+  transform: translateY(-2px);
+}
+
+.mood-input__submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+  box-shadow: none;
+  transform: none;
+}
+
+.mood-input__loader {
+  animation: mood-input-spin 800ms linear infinite;
+}
+
+@keyframes mood-input-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .mood-input__saludo h1 {
+    font-size: 2.35rem;
+  }
+
+  .mood-input__saludo p br {
+    display: none;
+  }
+
+  .mood-input__description-form {
+    padding-left: 50px;
+  }
+}

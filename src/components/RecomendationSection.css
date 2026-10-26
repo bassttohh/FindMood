@@ -1,0 +1,61 @@
+.recomendation-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 34px 0 8px;
+}
+
+.recomendation-container > span {
+  flex: 0 0 auto;
+  color: #0f172a;
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 800;
+}
+
+.recomendation-container .mood-card-grid {
+  flex: 1 1 480px;
+}
+
+.music-recomendations {
+  flex: 0 0 100%;
+  margin-top: 26px;
+}
+
+.music-recomendations h2 {
+  margin: 0 0 18px;
+  color: #0f172a;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 400;
+}
+
+.music-recomendations > p {
+  margin: 0;
+  color: #64748b;
+}
+
+.music-recomendations__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+@media (max-width: 680px) {
+  .recomendation-container {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .recomendation-container .mood-card-grid {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .music-recomendations__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,73 @@
+.mood-card-grid {
+  display: flex;
+  gap: 16px;
+  min-width: 0;
+  overflow-x: auto;
+  padding: 0 4px 6px;
+  scrollbar-width: none;
+}
+
+.mood-card-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.mood-card {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 14px;
+  min-height: 54px;
+  padding: 12px 22px;
+  border: 1px solid #dce3ee;
+  border-radius: 999px;
+  color: #0f172a;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgb(15 23 42 / 6%);
+  font-size: 0.96rem;
+  font-weight: 600;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+}
+
+.mood-card svg {
+  flex-shrink: 0;
+}
+
+.mood-card-stress {
+  background: #e8eef6;
+  border-color: #c9d5e3;
+}
+
+.mood-card-calm {
+  background: #e8f1eb;
+  border-color: #c8d9ce;
+}
+
+.mood-card-positive {
+  background: #edf0f4;
+  border-color: #d1d8e1;
+}
+
+.mood-card-sadness {
+  background: #e7edf4;
+  border-color: #cbd5e1;
+}
+
+.mood-card-melancholy,
+.mood-card-nostalgia {
+  background: #edf0f2;
+  border-color: #d5dce2;
+}
+
+.mood-card-happiness,
+.mood-card-energy {
+  background: #f3f0e4;
+  border-color: #e2d9bb;
+}
+
+.mood-card--active {
+  color: #ffffff;
+  background: #1f2937;
+  border-color: #1f2937;
+  box-shadow: 0 10px 22px rgb(15 23 42 / 20%);
+}
