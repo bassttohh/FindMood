@@ -1,10 +1,10 @@
 import './Sidebar.css'
-import { Heart, History, Home, Music2 } from 'lucide-react'
+import { Heart, History, Home, Music2, Menu } from 'lucide-react'
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, onToggle }) => {
   return (
 
-    <aside className='sidebar'>
+    <aside className={`sidebar ${isOpen ? 'sidebar--open' : 'sidebar--closed'}`}>
 
       <div className='logo-content'>
         <a className='sidebar__brand' href='/'>
@@ -13,6 +13,16 @@ const Sidebar = () => {
           </span>
           <span className='sidebar__logo__text'>MoodSound</span>
         </a>
+
+        <button
+          className='sidebar-menu__button'
+          type='button'
+          aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={isOpen}
+          onClick={onToggle}
+        >
+          <Menu className='sidebar-menu__icon' size={21} strokeWidth={2} />
+        </button>
       </div>
 
       <nav className='navbar__main'>

@@ -1,4 +1,3 @@
-
 import { shuffleSongs } from '../utils/shuffleSongs'
 
 const JAMENDO_URL = 'https://api.jamendo.com/v3.0/tracks/'

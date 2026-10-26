@@ -1,4 +1,5 @@
 .sidebar {
+  box-sizing: border-box;
   position: sticky;
   top: 0;
   display: flex;
@@ -9,9 +10,17 @@
   color: rgb(255 255 255 / 78%);
   background: #1f2937;
   border-right: 1px solid rgb(255 255 255 / 10%);
+  overflow: hidden;
+  transition:
+    width 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    padding 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 300ms ease;
 }
 
 .logo-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0 10px 42px;
 }
 
@@ -40,6 +49,31 @@
   font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: -0.03em;
+}
+
+.sidebar-menu__button {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: rgb(255 255 255 / 70%);
+  background: transparent;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.sidebar-menu__button:hover,
+.sidebar-menu__button:focus-visible {
+  border-color: rgb(255 255 255 / 14%);
+  color: #ffffff;
+  background: rgb(255 255 255 / 10%);
+  outline: none;
 }
 
 .navbar__main {
@@ -118,5 +152,76 @@
 
   .navbar__link span {
     display: none;
+  }
+}
+
+.app-layout.sidebar-closed {
+  grid-template-columns: 76px minmax(0, 1fr);
+}
+
+.sidebar--closed {
+  width: 76px;
+  padding-inline: 10px;
+}
+
+.sidebar--closed .logo-content {
+  justify-content: center;
+  padding-inline: 0;
+}
+
+.sidebar--closed .sidebar__brand {
+  display: none;
+}
+
+.sidebar--closed .navbar__link {
+  justify-content: center;
+  gap: 0;
+  padding-inline: 0;
+}
+
+.sidebar--closed .navbar__link span {
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    width 500ms ease,
+    opacity 400ms ease,
+    visibility 400ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-layout,
+  .sidebar,
+  .sidebar--closed .navbar__link span {
+    transition: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .sidebar--closed {
+    width: 100%;
+    padding: 14px 20px;
+  }
+
+  .sidebar--closed .logo-content {
+    justify-content: space-between;
+    padding-inline: 0;
+  }
+
+  .sidebar--closed .sidebar__brand {
+    display: inline-flex;
+  }
+
+  .sidebar--closed .navbar__link {
+    justify-content: flex-start;
+    gap: 13px;
+    padding-inline: 10px;
+  }
+
+  .sidebar--closed .navbar__link span {
+    width: auto;
+    opacity: 1;
+    visibility: visible;
   }
 }

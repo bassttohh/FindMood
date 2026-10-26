@@ -1,7 +1,18 @@
 const MOODS = {
   ambient: {
     patterns: [/\bestres/, /\bcans/, /\brelaj/, /\bagotad/, /\bsaturad/],
-    tags: ['pop', 'acoustic', 'rnb'],
+    tags: ['chillout', 'relaxing', 'pop'],
+    params: {},
+  },
+  angry: {
+    patterns: [
+      /\benojad/,
+      /\bmolest/,
+      /\birritad/,
+      /\bfurios/,
+      /\brabia/,
+    ],
+    tags: ['rock', 'electronic', 'pop'],
     params: {},
   },
   sad: {
@@ -15,22 +26,22 @@ const MOODS = {
       /\benferm/,
       /\bdeprim/,
     ],
-    tags: ['pop', 'rnb', 'rock'],
+    tags: ['sad', 'melancholic', 'pop'],
     params: {},
   },
   happy: {
     patterns: [/\balegr/, /\bfeliz/, /\bemocionad/, /\binspirad/],
-    tags: ['pop', 'dance', 'electronic'],
+    tags: ['happy', 'pop', 'dance'],
     params: {},
   },
   romantic: {
     patterns: [/\benamorad/, /\benganchad/, /\bamarrad/, /\bamor\b/],
-    tags: ['pop', 'rnb', 'soul'],
+    tags: ['romantic', 'love', 'rnb'],
     params: {},
   },
   nostalgic: {
     patterns: [/\bnostalg/, /\brecuerdo/, /\bmemoria/, /\bfamilia/, /\bjuventud/, /\bpasado\b/],
-    tags: ['pop', 'rock', 'rnb'],
+    tags: ['nostalgic', 'retro', 'pop'],
     params: {},
   },
 }

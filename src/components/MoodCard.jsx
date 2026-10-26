@@ -6,6 +6,10 @@ const moodGroups = {
     active: 'calm',
     ids: ['calm', 'stress', 'nostalgia'],
   },
+  angry: {
+    active: 'energy',
+    ids: ['energy', 'stress', 'motivation'],
+  },
   sad: {
     active: 'sadness',
     ids: ['sadness', 'melancholy', 'nostalgia'],
