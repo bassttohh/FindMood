@@ -10,9 +10,9 @@
 .recomendation-container > span {
   flex: 0 0 auto;
   color: #0f172a;
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-size: 1.18rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .recomendation-container .mood-card-grid {
@@ -27,9 +27,9 @@
 .music-recomendations h2 {
   margin: 0 0 18px;
   color: #0f172a;
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3vw, 2rem);
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 500;
 }
 
 .music-recomendations > p {
